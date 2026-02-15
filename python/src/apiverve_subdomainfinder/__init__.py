@@ -1,1 +1,3 @@
-from .apiClient import SubdomainfinderAPIClient
+from .apiClient import SubdomainfinderAPIClient, SubdomainfinderAPIClientError
+
+__all__ = ['SubdomainfinderAPIClient', 'SubdomainfinderAPIClientError']
