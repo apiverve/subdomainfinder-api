@@ -44,7 +44,10 @@ from apiverve_subdomainfinder.apiClient import SubdomainfinderAPIClient
 # Initialize the client with your APIVerve API key
 api = SubdomainfinderAPIClient("[YOUR_API_KEY]")
 
-query = { "domain": "google.com", "limit": 10 }
+query = {
+    "domain": "google.com",
+    "limit": 10
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "domain": "google.com", "limit": 10 }
+query = {
+    "domain": "google.com",
+    "limit": 10
+}
 ```
 
 ###### Simple Request
@@ -512,7 +518,10 @@ from apiverve_subdomainfinder.apiClient import SubdomainfinderAPIClient, Subdoma
 
 api = SubdomainfinderAPIClient("[YOUR_API_KEY]")
 
-query = { "domain": "google.com", "limit": 10 }
+query = {
+    "domain": "google.com",
+    "limit": 10
+}
 
 try:
     result = api.execute(query)
@@ -533,7 +542,10 @@ from apiverve_subdomainfinder.apiClient import SubdomainfinderAPIClient, Subdoma
 
 api = SubdomainfinderAPIClient("[YOUR_API_KEY]")
 
-query = { "domain": "google.com", "limit": 10 }
+query = {
+    "domain": "google.com",
+    "limit": 10
+}
 
 try:
     result = api.execute(query)
@@ -567,7 +579,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_subdomainfinder.apiClient import SubdomainfinderAPIClient, SubdomainfinderAPIClientError
 
-query = { "domain": "google.com", "limit": 10 }
+query = {
+    "domain": "google.com",
+    "limit": 10
+}
 
 # Using context manager ensures proper cleanup
 with SubdomainfinderAPIClient("[YOUR_API_KEY]") as api:
@@ -593,7 +608,10 @@ from apiverve_subdomainfinder.apiClient import SubdomainfinderAPIClient
 # Enable debug mode
 api = SubdomainfinderAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "domain": "google.com", "limit": 10 }
+query = {
+    "domain": "google.com",
+    "limit": 10
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -608,8 +626,12 @@ from apiverve_subdomainfinder.apiClient import SubdomainfinderAPIClient
 
 api = SubdomainfinderAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "domain": "google.com",
+    "limit": 10
+}
+
 try:
-    query = { "domain": "google.com", "limit": 10 }
     result = api.execute(query)
     print(result)
 finally:
