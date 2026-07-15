@@ -30,7 +30,7 @@ class subdomainfinderWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/subdomainfinder';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"domain":{"type":"string","required":true},"limit":{"type":"integer","required":false,"min":1,"max":500,"default":10}};
+        this.validationRules = {"domain":{"type":"string","required":true,"format":"domain"},"limit":{"type":"integer","required":false,"min":1,"max":500,"default":10}};
     }
 
     /**
