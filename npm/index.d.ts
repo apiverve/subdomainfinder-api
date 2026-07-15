@@ -4,28 +4,41 @@ declare module '@apiverve/subdomainfinder' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface subdomainfinderResponse {
     status: string;
     error: string | null;
     data: SubdomainFinderData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface SubdomainFinderData {
-      count:      number;
       rootDomain: RootDomain;
       subDomains: SubDomain[];
+      count:      number | null;
+      totalFound: number | null;
   }
   
   interface RootDomain {
-      domain:  string;
-      records: string[];
+      domain:  null | string;
+      records: (null | string)[];
   }
   
   interface SubDomain {
-      host:    string;
-      records: string[];
+      host:    null | string;
+      records: (null | string)[];
   }
 
   export default class subdomainfinderWrapper {
