@@ -125,77 +125,19 @@ async function makeRequest() {
   "status": "ok",
   "error": null,
   "data": {
-    "count": 54,
     "rootDomain": {
       "domain": "paypal.com",
       "records": [
         "151.101.3.1",
-        "162.159.141.96",
-        "151.101.195.1"
+        "151.101.195.1",
+        "162.159.141.96"
       ]
     },
     "subDomains": [
       {
-        "host": "smtp.paypal.com",
+        "host": "api.paypal.com",
         "records": [
-          "64.4.244.68"
-        ]
-      },
-      {
-        "host": "ns1.paypal.com",
-        "records": [
-          "64.4.244.70"
-        ]
-      },
-      {
-        "host": "www.paypal.com",
-        "records": [
-          "151.101.193.21",
-          "151.101.129.21",
-          "151.101.1.21",
-          "151.101.65.21"
-        ]
-      },
-      {
-        "host": "ns2.paypal.com",
-        "records": [
-          "64.4.244.71"
-        ]
-      },
-      {
-        "host": "autodiscover.paypal.com",
-        "records": [
-          "52.96.191.8",
-          "52.96.79.200",
-          "52.96.239.184",
-          "52.96.156.24"
-        ]
-      },
-      {
-        "host": "test.paypal.com",
-        "records": [
-          "156.59.125.88"
-        ]
-      },
-      {
-        "host": "admin.paypal.com",
-        "records": [
-          "173.0.88.10"
-        ]
-      },
-      {
-        "host": "mx.paypal.com",
-        "records": [
-          "10.190.3.55"
-        ]
-      },
-      {
-        "host": "m.paypal.com",
-        "records": [
-          "151.101.193.21",
-          "151.101.1.21",
-          "151.101.129.21",
-          "151.101.65.21"
+          "66.211.168.123"
         ]
       },
       {
@@ -205,9 +147,39 @@ async function makeRequest() {
         ]
       },
       {
-        "host": "api.paypal.com",
+        "host": "admin.paypal.com",
         "records": [
-          "66.211.168.123"
+          "173.0.88.10"
+        ]
+      },
+      {
+        "host": "smtp.paypal.com",
+        "records": [
+          "64.4.244.68"
+        ]
+      },
+      {
+        "host": "ns2.paypal.com",
+        "records": [
+          "64.4.244.71"
+        ]
+      },
+      {
+        "host": "test.paypal.com",
+        "records": [
+          "156.59.125.88"
+        ]
+      },
+      {
+        "host": "ns1.paypal.com",
+        "records": [
+          "64.4.244.70"
+        ]
+      },
+      {
+        "host": "mx.paypal.com",
+        "records": [
+          "10.190.3.55"
         ]
       },
       {
@@ -220,9 +192,29 @@ async function makeRequest() {
         ]
       },
       {
-        "host": "news.paypal.com",
+        "host": "shop.paypal.com",
         "records": [
-          "192.243.228.1"
+          "54.148.26.111",
+          "35.80.170.143",
+          "54.212.145.128"
+        ]
+      },
+      {
+        "host": "www.paypal.com",
+        "records": [
+          "151.101.193.21",
+          "151.101.65.21",
+          "151.101.129.21",
+          "151.101.1.21"
+        ]
+      },
+      {
+        "host": "m.paypal.com",
+        "records": [
+          "151.101.129.21",
+          "151.101.1.21",
+          "151.101.193.21",
+          "151.101.65.21"
         ]
       },
       {
@@ -232,8 +224,43 @@ async function makeRequest() {
         ]
       },
       {
-        "host": "login.paypal.com",
-        "records": []
+        "host": "ssl.paypal.com",
+        "records": [
+          "151.101.65.21",
+          "151.101.129.21",
+          "151.101.193.21",
+          "151.101.1.21"
+        ]
+      },
+      {
+        "host": "i.paypal.com",
+        "records": [
+          "63.140.38.107",
+          "63.140.39.244",
+          "63.140.39.114",
+          "63.140.38.116",
+          "63.140.39.254",
+          "63.140.39.146",
+          "63.140.38.213",
+          "63.140.39.214",
+          "63.140.39.87",
+          "63.140.39.123"
+        ]
+      },
+      {
+        "host": "news.paypal.com",
+        "records": [
+          "192.243.228.1"
+        ]
+      },
+      {
+        "host": "autodiscover.paypal.com",
+        "records": [
+          "52.96.79.120",
+          "52.96.79.200",
+          "52.96.163.40",
+          "52.96.79.248"
+        ]
       },
       {
         "host": "dl.paypal.com",
@@ -242,65 +269,20 @@ async function makeRequest() {
         ]
       },
       {
-        "host": "i.paypal.com",
-        "records": [
-          "63.140.39.240",
-          "63.140.38.55",
-          "63.140.39.72",
-          "63.140.39.35",
-          "63.140.39.22",
-          "63.140.38.210",
-          "63.140.38.138",
-          "63.140.38.111",
-          "63.140.39.117",
-          "63.140.39.15"
-        ]
-      },
-      {
-        "host": "ssl.paypal.com",
-        "records": [
-          "151.101.129.21",
-          "151.101.1.21",
-          "151.101.65.21",
-          "151.101.193.21"
-        ]
-      },
-      {
-        "host": "service.paypal.com",
-        "records": [
-          "192.243.228.1"
-        ]
-      },
-      {
         "host": "connect.paypal.com",
         "records": [
+          "151.101.65.21",
           "151.101.129.21",
           "151.101.1.21",
-          "151.101.193.21",
-          "151.101.65.21"
+          "151.101.193.21"
         ]
       },
       {
         "host": "sandbox.paypal.com",
         "records": [
           "151.101.195.1",
-          "151.101.3.1",
-          "162.159.141.96"
-        ]
-      },
-      {
-        "host": "reports.paypal.com",
-        "records": [
-          "173.0.93.28"
-        ]
-      },
-      {
-        "host": "t.paypal.com",
-        "records": [
-          "151.101.131.1",
-          "151.101.67.1",
-          "151.101.3.1",
-          "151.101.195.1"
+          "162.159.141.96",
+          "151.101.3.1"
         ]
       },
       {
@@ -310,15 +292,44 @@ async function makeRequest() {
         ]
       },
       {
-        "host": "status.paypal.com",
+        "host": "c.paypal.com",
         "records": [
-          "20.69.68.249"
+          "151.101.129.21",
+          "151.101.65.21",
+          "151.101.193.21",
+          "151.101.1.21"
         ]
       },
       {
-        "host": "forms.paypal.com",
+        "host": "business.paypal.com",
         "records": [
-          "216.113.190.190"
+          "104.18.6.168",
+          "104.18.7.168"
+        ]
+      },
+      {
+        "host": "service.paypal.com",
+        "records": [
+          "192.243.228.1"
+        ]
+      },
+      {
+        "host": "login.paypal.com",
+        "records": []
+      },
+      {
+        "host": "t.paypal.com",
+        "records": [
+          "151.101.3.1",
+          "151.101.131.1",
+          "151.101.67.1",
+          "151.101.195.1"
+        ]
+      },
+      {
+        "host": "status.paypal.com",
+        "records": [
+          "20.69.68.249"
         ]
       },
       {
@@ -328,30 +339,21 @@ async function makeRequest() {
         ]
       },
       {
-        "host": "business.paypal.com",
+        "host": "newsletter.paypal.com",
         "records": [
-          "151.101.1.21",
-          "151.101.129.21",
-          "151.101.65.21",
-          "151.101.193.21"
+          "192.243.228.1"
         ]
       },
       {
-        "host": "c.paypal.com",
+        "host": "reports.paypal.com",
         "records": [
-          "151.101.129.21",
-          "151.101.1.21",
-          "151.101.65.21",
-          "151.101.193.21"
+          "173.0.93.28"
         ]
       },
       {
-        "host": "p.paypal.com",
+        "host": "forms.paypal.com",
         "records": [
-          "151.101.67.1",
-          "151.101.3.1",
-          "151.101.131.1",
-          "151.101.195.1"
+          "216.113.190.190"
         ]
       },
       {
@@ -361,51 +363,75 @@ async function makeRequest() {
         ]
       },
       {
+        "host": "p.paypal.com",
+        "records": [
+          "151.101.131.1",
+          "151.101.67.1",
+          "151.101.195.1",
+          "151.101.3.1"
+        ]
+      },
+      {
+        "host": "transfer.paypal.com",
+        "records": [
+          "151.101.193.21",
+          "151.101.129.21",
+          "151.101.65.21",
+          "151.101.1.21"
+        ]
+      },
+      {
+        "host": "xmpp.paypal.com",
+        "records": [
+          "173.224.160.144",
+          "173.224.160.141",
+          "185.97.80.137",
+          "185.97.80.136"
+        ]
+      },
+      {
         "host": "manager.paypal.com",
         "records": [
           "173.0.93.191"
         ]
       },
       {
-        "host": "xmpp.paypal.com",
-        "records": [
-          "173.224.160.141",
-          "185.97.80.136",
-          "173.224.160.144",
-          "185.97.80.137"
-        ]
-      },
-      {
         "host": "developer.paypal.com",
         "records": [
-          "151.101.65.21",
           "151.101.1.21",
           "151.101.193.21",
-          "151.101.129.21"
+          "151.101.129.21",
+          "151.101.65.21"
         ]
       },
       {
-        "host": "transfer.paypal.com",
+        "host": "account.paypal.com",
+        "records": [
+          "192.243.228.1"
+        ]
+      },
+      {
+        "host": "history.paypal.com",
         "records": [
           "151.101.129.21",
-          "151.101.1.21",
           "151.101.193.21",
-          "151.101.65.21"
+          "151.101.65.21",
+          "151.101.1.21"
         ]
       },
       {
         "host": "pics.paypal.com",
         "records": [
-          "151.101.195.1",
           "151.101.131.1",
+          "151.101.195.1",
           "151.101.67.1",
           "151.101.3.1"
         ]
       },
       {
-        "host": "accounts.paypal.com",
+        "host": "registration.paypal.com",
         "records": [
-          "173.0.93.28"
+          "173.0.93.135"
         ]
       },
       {
@@ -416,30 +442,21 @@ async function makeRequest() {
         ]
       },
       {
-        "host": "history.paypal.com",
+        "host": "accounts.paypal.com",
         "records": [
-          "151.101.193.21",
-          "151.101.1.21",
-          "151.101.129.21",
-          "151.101.65.21"
-        ]
-      },
-      {
-        "host": "registration.paypal.com",
-        "records": [
-          "173.0.93.135"
-        ]
-      },
-      {
-        "host": "bm.paypal.com",
-        "records": [
-          "130.211.16.153"
+          "173.0.93.28"
         ]
       },
       {
         "host": "hotspot.paypal.com",
         "records": [
           "64.4.240.12"
+        ]
+      },
+      {
+        "host": "bm.paypal.com",
+        "records": [
+          "130.211.16.153"
         ]
       },
       {
@@ -453,71 +470,10 @@ async function makeRequest() {
         "records": [
           "173.0.88.142"
         ]
-      },
-      {
-        "host": "sip2.paypal.com",
-        "records": [
-          "64.68.79.227"
-        ]
-      },
-      {
-        "host": "credit.paypal.com",
-        "records": [
-          "159.127.187.12"
-        ]
-      },
-      {
-        "host": "smtp-in.paypal.com",
-        "records": [
-          "64.4.244.68"
-        ]
-      },
-      {
-        "host": "solutions.paypal.com",
-        "records": [
-          "173.0.88.143"
-        ]
-      },
-      {
-        "host": "emails.paypal.com",
-        "records": [
-          "13.111.204.15"
-        ]
-      },
-      {
-        "host": "notify.paypal.com",
-        "records": [
-          "173.0.81.33",
-          "173.0.81.65",
-          "173.0.81.140",
-          "173.0.81.1"
-        ]
-      },
-      {
-        "host": "sip1.paypal.com",
-        "records": [
-          "64.68.79.226"
-        ]
-      },
-      {
-        "host": "gadget.paypal.com",
-        "records": [
-          "173.0.94.17"
-        ]
-      },
-      {
-        "host": "av2.paypal.com",
-        "records": [
-          "64.68.79.231"
-        ]
-      },
-      {
-        "host": "av1.paypal.com",
-        "records": [
-          "64.68.79.230"
-        ]
       }
-    ]
+    ],
+    "count": 47,
+    "totalFound": 47
   }
 }
 ```
