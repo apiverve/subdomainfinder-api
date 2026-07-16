@@ -25,18 +25,24 @@ namespace APIVerve.API.SubdomainFinder
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
-        [JsonProperty("count")]
-        public long Count { get; set; }
-
         [JsonProperty("rootDomain")]
         public RootDomain RootDomain { get; set; }
 
         [JsonProperty("subDomains")]
         public SubDomain[] SubDomains { get; set; }
+
+        [JsonProperty("count")]
+        public long? Count { get; set; }
+
+        [JsonProperty("totalFound")]
+        public long? TotalFound { get; set; }
     }
 
     public partial class RootDomain
@@ -55,5 +61,17 @@ namespace APIVerve.API.SubdomainFinder
 
         [JsonProperty("records")]
         public string[] Records { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
