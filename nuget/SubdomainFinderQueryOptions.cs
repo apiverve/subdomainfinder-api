@@ -20,6 +20,6 @@ namespace APIVerve.API.SubdomainFinder
         /// Limit the number of subdomains to detect
         /// </summary>
         [JsonProperty("limit")]
-        public string Limit { get; set; }
+        public int? Limit { get; set; }
     }
 }
