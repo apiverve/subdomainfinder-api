@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/subdomainfinder",
-  "version": "1.2.0",
-  "description": "Subdomain Finder is a simple tool for finding all the available subdomains for a given domain. It returns a list of all the available subdomains for the given domain.",
+  "version": "1.2.2",
+  "description": "Subdomain Finder discovers active subdomains and their resolved IP addresses for any target domain. It checks certificate transparency logs and common hostnames, returning matched hostnames, root A records, and scan completion status.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "subdomain finder", "subdomain enumeration", "subdomain discovery", "dns lookup", "domain subdomains"
+    "subdomain finder api", "subdomain discovery api", "find all subdomains of a domain", "get subdomains for domain", "find subdomains"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/subdomainfinder-api/issues"
   },
-  "homepage": "https://subdomainfinder.apiverve.com?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/subdomainfinder?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",

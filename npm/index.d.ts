@@ -29,6 +29,7 @@ declare module '@apiverve/subdomainfinder' {
       subDomains: SubDomain[];
       count:      number | null;
       totalFound: number | null;
+      complete:   boolean | null;
   }
   
   interface RootDomain {

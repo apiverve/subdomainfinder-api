@@ -16,7 +16,8 @@ const api = new subdomainfinderAPI({
 // Example query
 var query = {
   domain: "google.com",
-  limit: 10
+  limit: 10,
+  deepScan: false
 };
 
 // Make the API request using callback
