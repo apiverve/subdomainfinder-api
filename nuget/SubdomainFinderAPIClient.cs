@@ -68,7 +68,8 @@ namespace APIVerve.API.SubdomainFinder
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
             { "domain", new ValidationRule { Type = "string", Required = true, Format = "domain" } },
-            { "limit", new ValidationRule { Type = "integer", Required = false, Min = 1, Max = 500 } }
+            { "limit", new ValidationRule { Type = "integer", Required = false, Min = 1, Max = 500 } },
+            { "deepScan", new ValidationRule { Type = "boolean", Required = false } }
         };
 
         /// <summary>Format validation patterns</summary>

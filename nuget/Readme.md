@@ -1,13 +1,12 @@
-SubdomainFinder API
+Subdomain Finder API
 ============
 
-Subdomain Finder is a simple tool for finding all the available subdomains for a given domain. It returns a list of all the available subdomains for the given domain.
+Subdomain Finder discovers active subdomains and their resolved IP addresses for any target domain. It checks certificate transparency logs and common hostnames, returning matched hostnames, root A records, and scan completion status.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [SubdomainFinder API](https://subdomainfinder.apiverve.com?utm_source=nuget&utm_medium=readme)
+[![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.SubdomainFinder.svg)](https://www.nuget.org/packages/APIVerve.API.SubdomainFinder)
+
+This is a .NET wrapper for the [Subdomain Finder API](https://apiverve.com/marketplace/subdomainfinder?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -40,8 +39,8 @@ From within Visual Studio:
 
 ## Configuration
 
-Before using the subdomainfinder API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=readme)
+Before using the Subdomain Finder API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -61,9 +60,10 @@ class Program
         var apiClient = new SubdomainFinderAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new SubdomainFinderQueryOptions {
-    Domain = "google.com",
-    Limit = 10
-};
+            Domain = "google.com",
+            Limit = 10,
+            DeepScan = true
+        };
 
         // Make the API call
         try
@@ -93,13 +93,13 @@ class Program
 
 ## Usage
 
-The SubdomainFinder API documentation is found here: [https://docs.apiverve.com/ref/subdomainfinder](https://docs.apiverve.com/ref/subdomainfinder?utm_source=nuget&utm_medium=readme).
+The Subdomain Finder API documentation is found here: [https://docs.apiverve.com/ref/subdomainfinder](https://docs.apiverve.com/ref/subdomainfinder?utm_source=nuget&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-SubdomainFinder API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+Subdomain Finder API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```csharp
 // Create an instance of the API client
@@ -126,9 +126,10 @@ public class Example
         var apiClient = new SubdomainFinderAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new SubdomainFinderQueryOptions {
-    Domain = "google.com",
-    Limit = 10
-};
+            Domain = "google.com",
+            Limit = 10,
+            DeepScan = true
+        };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
 
@@ -159,9 +160,10 @@ public class Example
         var apiClient = new SubdomainFinderAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new SubdomainFinderQueryOptions {
-    Domain = "google.com",
-    Limit = 10
-};
+            Domain = "google.com",
+            Limit = 10,
+            DeepScan = true
+        };
 
         var response = apiClient.Execute(queryOptions);
 
@@ -197,9 +199,10 @@ public class Example
         var apiClient = new SubdomainFinderAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new SubdomainFinderQueryOptions {
-    Domain = "google.com",
-    Limit = 10
-};
+            Domain = "google.com",
+            Limit = 10,
+            DeepScan = true
+        };
 
         try
         {
@@ -254,9 +257,10 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new SubdomainFinderQueryOptions {
-    Domain = "google.com",
-    Limit = 10
-};
+            Domain = "google.com",
+            Limit = 10,
+            DeepScan = true
+        };
 
         try
         {
@@ -297,7 +301,8 @@ apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
 var queryOptions = new SubdomainFinderQueryOptions {
     Domain = "google.com",
-    Limit = 10
+    Limit = 10,
+    DeepScan = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -324,7 +329,8 @@ apiClient.SetLogger(message =>
 
 var queryOptions = new SubdomainFinderQueryOptions {
     Domain = "google.com",
-    Limit = 10
+    Limit = 10,
+    DeepScan = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -343,7 +349,8 @@ apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (defau
 
 var queryOptions = new SubdomainFinderQueryOptions {
     Domain = "google.com",
-    Limit = 10
+    Limit = 10,
+    DeepScan = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -356,7 +363,8 @@ The API client implements `IDisposable` for proper resource cleanup:
 ```csharp
 var queryOptions = new SubdomainFinderQueryOptions {
     Domain = "google.com",
-    Limit = 10
+    Limit = 10,
+    DeepScan = true
 };
 
 using (var apiClient = new SubdomainFinderAPIClient("[YOUR_API_KEY]"))
@@ -724,7 +732,8 @@ using (var apiClient = new SubdomainFinderAPIClient("[YOUR_API_KEY]"))
       }
     ],
     "count": 47,
-    "totalFound": 47
+    "totalFound": 47,
+    "complete": true
   }
 }
 ```
@@ -733,7 +742,7 @@ using (var apiClient = new SubdomainFinderAPIClient("[YOUR_API_KEY]"))
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -744,12 +753,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 

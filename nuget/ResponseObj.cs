@@ -43,6 +43,9 @@ namespace APIVerve.API.SubdomainFinder
 
         [JsonProperty("totalFound")]
         public long? TotalFound { get; set; }
+
+        [JsonProperty("complete")]
+        public bool? Complete { get; set; }
     }
 
     public partial class RootDomain

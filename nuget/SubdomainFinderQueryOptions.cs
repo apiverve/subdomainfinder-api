@@ -21,5 +21,11 @@ namespace APIVerve.API.SubdomainFinder
         /// </summary>
         [JsonProperty("limit")]
         public int? Limit { get; set; }
+
+        /// <summary>
+        /// Search the full wordlist instead of only certificate transparency and common names. Slower, and may still report complete: false when the time limit is reached
+        /// </summary>
+        [JsonProperty("deepScan")]
+        public bool? DeepScan { get; set; }
     }
 }
