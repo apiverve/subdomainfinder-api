@@ -1,6 +1,6 @@
 import re
-from typing import Dict, Optional, Any
-from dataclasses import dataclass, List
+from typing import Dict, Optional, Any, List
+from dataclasses import dataclass
 import requests
 
 
@@ -24,8 +24,9 @@ class ValidationError(SubdomainfinderAPIClientError):
 class SubdomainfinderAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
-        "domain": {"type": "string", "required": True},
-        "limit": {"type": "integer", "required": False, "min": 1, "max": 500, "default": 10}
+        "domain": {"type": "string", "required": True, "format": "domain"},
+        "limit": {"type": "integer", "required": False, "min": 1, "max": 500, "default": 10},
+        "deepScan": {"type": "boolean", "required": False, "default": False}
     }
 
     # Format validation patterns
