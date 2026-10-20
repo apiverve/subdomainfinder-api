@@ -2,9 +2,10 @@ openapi: 3.0.4
 info:
   title: Subdomain Finder
   description: >-
-    Subdomain Finder is a simple tool for finding all the available subdomains
-    for a given domain. It returns a list of all the available subdomains for
-    the given domain.
+    Subdomain Finder discovers active subdomains and their resolved IP addresses
+    for any target domain. It checks certificate transparency logs and common
+    hostnames, returning matched hostnames, root A records, and scan completion
+    status.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +20,7 @@ servers:
 paths:
   /v1/subdomainfinder:
     get:
-      summary: Scan Subdomains
+      summary: Subdomain Finder
       description: >-
         Subdomain Finder is a simple tool for finding all the available
         subdomains for a given domain. It returns a list of all the available
@@ -42,6 +43,16 @@ paths:
           required: false
           description: Limit the number of subdomains to detect
           example: 5
+        - name: deepScan
+          in: query
+          schema:
+            type: boolean
+          required: false
+          description: >-
+            Search the full wordlist instead of only certificate transparency
+            and common names. Slower, and may still report complete: false when
+            the time limit is reached
+          example: true
       responses:
         '200':
           description: Successful Response
@@ -269,6 +280,7 @@ paths:
                         - 173.0.88.142
                   count: 47
                   totalFound: 47
+                  complete: true
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
