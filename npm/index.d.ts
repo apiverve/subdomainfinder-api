@@ -25,11 +25,12 @@ declare module '@apiverve/subdomainfinder' {
 
 
   interface SubdomainFinderData {
-      rootDomain: RootDomain;
-      subDomains: SubDomain[];
-      count:      number | null;
-      totalFound: number | null;
-      complete:   boolean | null;
+      rootDomain:  RootDomain;
+      subDomains:  SubDomain[];
+      count:       number | null;
+      totalFound:  number | null;
+      complete:    boolean | null;
+      hasWildcard: boolean | null;
   }
   
   interface RootDomain {
@@ -38,8 +39,21 @@ declare module '@apiverve/subdomainfinder' {
   }
   
   interface SubDomain {
-      host:    null | string;
-      records: (null | string)[];
+      host:               null | string;
+      records:            (null | string)[];
+      source:             Source | null;
+      firstSeen:          Date | null;
+      certificateExpires: Date | null;
+      hostingProvider:    HostingProvider | null;
+  }
+  
+  enum HostingProvider {
+      Fastly = "Fastly",
+  }
+  
+  enum Source {
+      Certificate = "certificate",
+      Wordlist = "wordlist",
   }
 
   export default class subdomainfinderWrapper {
