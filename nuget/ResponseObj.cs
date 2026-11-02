@@ -46,6 +46,9 @@ namespace APIVerve.API.SubdomainFinder
 
         [JsonProperty("complete")]
         public bool? Complete { get; set; }
+
+        [JsonProperty("hasWildcard")]
+        public bool? HasWildcard { get; set; }
     }
 
     public partial class RootDomain
@@ -64,6 +67,18 @@ namespace APIVerve.API.SubdomainFinder
 
         [JsonProperty("records")]
         public string[] Records { get; set; }
+
+        [JsonProperty("source")]
+        public Source? Source { get; set; }
+
+        [JsonProperty("firstSeen")]
+        public DateTimeOffset? FirstSeen { get; set; }
+
+        [JsonProperty("certificateExpires")]
+        public DateTimeOffset? CertificateExpires { get; set; }
+
+        [JsonProperty("hostingProvider")]
+        public HostingProvider? HostingProvider { get; set; }
     }
 
     public partial class Premium
@@ -77,4 +92,8 @@ namespace APIVerve.API.SubdomainFinder
         [JsonProperty("locked_fields")]
         public string[] LockedFields { get; set; }
     }
+
+    public enum HostingProvider { Fastly };
+
+    public enum Source { Certificate, Wordlist };
 }
